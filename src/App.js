@@ -10,7 +10,13 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 firebase.initializeApp({
-  // your config
+  apiKey: "AIzaSyAj4tlExbmcOAIDbKiDglK8d5vq5hp0Bds",
+  authDomain: "guilaran-project-2.firebaseapp.com",
+  projectId: "guilaran-project-2",
+  storageBucket: "guilaran-project-2.appspot.com",
+  messagingSenderId: "110883303211",
+  appId: "1:110883303211:web:b0cb2605b08b46b36d9f6e",
+  measurementId: "G-BQR2FFH213"
 })
 
 const auth = firebase.auth();
@@ -70,7 +76,7 @@ function ChatRoom() {
   const [formValue, setFormValue] = useState('');
 
 
-  const sendMessage = async (e) => {
+  const sendMessage = async(e) => {
     e.preventDefault();
 
     const { uid, photoURL } = auth.currentUser;
