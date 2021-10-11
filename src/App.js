@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import './App.css';
+import configData from "./firebase-config.json";
 
 import firebase from 'firebase/app';
 import 'firebase/firestore';
@@ -9,15 +10,7 @@ import 'firebase/analytics';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
-firebase.initializeApp({
-  apiKey: "AIzaSyAj4tlExbmcOAIDbKiDglK8d5vq5hp0Bds",
-  authDomain: "guilaran-project-2.firebaseapp.com",
-  projectId: "guilaran-project-2",
-  storageBucket: "guilaran-project-2.appspot.com",
-  messagingSenderId: "110883303211",
-  appId: "1:110883303211:web:b0cb2605b08b46b36d9f6e",
-  measurementId: "G-BQR2FFH213"
-})
+firebase.initializeApp(configData);
 
 const auth = firebase.auth();
 const firestore = firebase.firestore();
@@ -76,7 +69,7 @@ function ChatRoom() {
   const [formValue, setFormValue] = useState('');
 
 
-  const sendMessage = async(e) => {
+  const sendMessage = async (e) => {
     e.preventDefault();
 
     const { uid, photoURL } = auth.currentUser;
