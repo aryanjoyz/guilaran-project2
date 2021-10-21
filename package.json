@@ -1,20 +1,17 @@
 {
   "name": "react-chat",
   "version": "0.1.0",
-  "engines": {
-    "node": "10.17.0",
-    "npm": "6.11.3"
-},
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-    "firebase": "^7.24.0",
+    "firebase": "^7.20.0",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-firebase-hooks": "^2.2.0",
-    "react-scripts": "3.4.3"
+    "react-scripts": "^3.4.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -38,7 +35,6 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
